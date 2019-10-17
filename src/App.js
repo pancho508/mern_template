@@ -6,6 +6,7 @@ import CreateTodo from "./components/create-todo.component";
 import EditTodo from "./components/edit-todo.component";
 import TodosList from "./components/todos-list.component";
 
+import Dropdown from './components/dropdown.component';
 
 import logo from "./logo.png";
 
@@ -17,7 +18,8 @@ class App extends Component {
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a className="navbar-brand" href="https://panchos-portfolio.herokuapp.com/" target="panchos-portfolio.herokuapp.com">
               <img src={logo} width="30" height="30" alt="https://panchos-portfolio.herokuapp.com/" />
-            </a>            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            </a>            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -50,6 +52,7 @@ class App extends Component {
               </form>
             </div>
           </nav>
+          <Dropdown />
 
           <Route path="/" exact component={TodosList} />
           <Route path="/edit/:id" component={EditTodo} />
